@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textColorHint="@color/white"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/purple_500"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/btSearch"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="What do you want to search?"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/purple_500"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/cbAbv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABV"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/purple_500"
+        android:textColorHint="@color/purple_500"
+        android:textColorLink="@color/purple_500"
+        app:layout_constraintEnd_toStartOf="@+id/btSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textinputlayout" />
+
+    <Button
+        android:id="@+id/btSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search
+"
+        android:textColorHighlight="@color/purple_500"
+        android:textColorHint="@color/purple_500"
+        android:textColorLink="@color/purple_500"
+        app:layout_constraintEnd_toStartOf="@+id/cbIbu"
+        app:layout_constraintStart_toEndOf="@+id/cbAbv"
+        app:layout_constraintTop_toBottomOf="@+id/textinputlayout" />
+
+    <CheckBox
+        android:id="@+id/cbIbu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IBU"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/purple_500"
+        android:textColorHint="@color/purple_500"
+        android:textColorLink="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btSearch"
+        app:layout_constraintTop_toBottomOf="@+id/textinputlayout" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="7dp"
+        android:background="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btSearch" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
